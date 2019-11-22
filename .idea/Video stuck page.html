@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <title>Test app</title>
+    <script type = "text/javascript">
+        function dik1() {
+            var to_do = document.getElementById("doen");
+            to_do.innerHTML = "<b>Poef!</b>";
+            var knopje = document.getElementById("knop");
+            knopje.innerHTML = "I still hear it";
+            knopje.onclick = dik2;
+            var feet =document.getElementById("grap");
+            feet.innerHTML = "oh realy?"
+            var go_dark =document.getElementById("video");
+            go_dark.style.display = "none";
+        }
+        function dik2() {
+        var to_do = document.getElementById("doen");
+            to_do.innerHTML = "<i>abacadabra</i>";
+            var knopjes = document.getElementById("knop");
+            knopjes.innerHTML = "Please end my struggle";
+            knopjes.onclick = dik3;
+            var feet =document.getElementById("grap");
+            feet.innerHTML = "look for flying cars"
+            var go_dark =document.getElementById("video");
+            go_dark.style.display = "none";
+        }
+        function dik3() {
+        var to_do = document.getElementById("doen");
+            to_do.innerHTML = "This should make you happy";
+            var knopjes = document.getElementById("knop");
+            knopjes.innerHTML = "Make it go away!";
+            knopjes.onclick = dik1;
+            var feet =document.getElementById("grap");
+            feet.innerHTML = "you will be stuck here forever"
+            var go_dark =document.getElementById("video");
+            go_dark.style.display = "";
+        }
+    </script>
+</head>
+<body>
+<!-- Chrome does not support this method of spamming. It blocks the autoplay. -->
+<p id="doen">Welcome</p>
+<button id="knop" type = "button" onclick="dik1();">Make it go away!</button>
+<p>huehuehue, <text id="grap">ready yourself</text></p>
+<iframe id="video" width="800" height="600" src="http://www.youtube.com/embed/WoKH8Vv_s7U?autoplay=1&controls=0&playlist=WoKH8Vv_s7U&loop=1" style="pointer-events:none;"></iframe>
+</body>
+<footer>
+
+</footer>
+</html>

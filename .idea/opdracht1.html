@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JWZ</title>
+    <script src="FileSaver.js"></script>
+    <script src="scripting.js"></script>
+    <script>
+        function doStuff(){
+            var voornaam = document.getElementById("voornaam").value;
+            var achternaam = document.getElementById("achternaam").value;
+            var mailadres = document.getElementById("mailadres").value;
+            var bericht = document.getElementById("bericht").value;
+            var complete = voornaam + "\n" + achternaam + "\n" + mailadres + "\n" + bericht;
+            var blob = new Blob([complete],
+                { type: "text/plain;charset=utf-8" });
+                saveAs(blob, "input.txt");
+            window.alert("You have send the goods!");
+            var delayInMilliseconds = 10000; //10 seconds
+
+            setTimeout(function() {
+            location.href = "C:/Users/boazv/.IdeaIC2019.2/config/scratches/opdracht.html"
+            }, delayInMilliseconds);
+        }
+    </script>
+</head>
+<body>
+    Voornaam:<br>
+    <input name = "voornaam" id = "voornaam" pattern="[A-Z a-z]{2,}" autofocus>
+    <br>
+    Achternaam<br>
+    <input type = "text" name = "achternaam" id = "achternaam" pattern="[A-Z a-z]{2,}">
+    <br>
+    mailadres<br>
+    <input type = "email" name = "mailadres" id = "mailadres">
+    <br>
+    Bericht<br>
+    <textarea rows="4" cols="50" name="bericht" id="bericht" maxlength="200" minlength="10"></textarea>
+    <br>
+    <input type="submit" name="send" onclick="doStuff()">
+
+</body>
+</html>
